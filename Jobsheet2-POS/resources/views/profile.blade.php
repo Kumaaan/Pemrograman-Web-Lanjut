@@ -1,0 +1,1 @@
+<h1>Profil User ID: {{ $id }}, Nama: {{ $name }}</h1>
