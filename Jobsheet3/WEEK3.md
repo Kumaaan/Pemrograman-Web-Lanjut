@@ -2,7 +2,7 @@
 
 - **Praktikum 1 (Migrasi / skema DB):** Menyiapkan database PWL_POS dan melakukan konfigurasi environment pada project Laravel.
 
-	![Screenshot Praktikum 1](Jassets/screenshots/praktikum1.png)
+	![Screenshot Praktikum 1](assets/screenshots/praktikum1.png)
 
 
 - **Praktikum 2 (Model + Factory):** Membuat file migrasi untuk mengelola skema database secara terstruktur tanpa perlu menulis query SQL secara manual
