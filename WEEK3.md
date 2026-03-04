@@ -2,43 +2,43 @@
 
 - **Praktikum 1 (Migrasi / skema DB):** Menyiapkan database PWL_POS dan melakukan konfigurasi environment pada project Laravel.
 
-	![Screenshot Praktikum 1](assets/screenshots/praktikum1.png)
+	![Screenshot Praktikum 1](Jobsheet3/assets/screenshots/praktikum1.png)
 
 
 - **Praktikum 2 (Model + Factory):** Membuat file migrasi untuk mengelola skema database secara terstruktur tanpa perlu menulis query SQL secara manual
 
-	![Screenshot Praktikum 2.1](assets/screenshots/praktikum2.1.png)
-    ![Screenshot Praktikum 2.2](assets/screenshots/praktikum2.2.png)
+	![Screenshot Praktikum 2.1](Jobsheet3/assets/screenshots/praktikum2.1.png)
+    ![Screenshot Praktikum 2.2](Jobsheet3/assets/screenshots/praktikum2.2.png)
 
 
 - **Praktikum 3 (Seeder):** Menginput data awal dummmy ke dalam tabel database secara otomatis menggunakan fitur Seeder pada Laravel.
 
-	![Screenshot Praktikum 3](assets/screenshots/praktikum3.1.png)
-    ![Screenshot Praktikum 3](assets/screenshots/praktikum3.2.png)
-	![Screenshot Praktikum 3](assets/screenshots/praktikum3.3.png)
+	![Screenshot Praktikum 3](Jobsheet3/assets/screenshots/praktikum3.1.png)
+    ![Screenshot Praktikum 3](Jobsheet3/assets/screenshots/praktikum3.2.png)
+	![Screenshot Praktikum 3](Jobsheet3/assets/screenshots/praktikum3.3.png)
 
 
 - **Praktikum 4 (Relasi):** Mengambil dan memanipulasi data dari database menggunakan mekanisme DB Facade bawaan Laravel untuk diolah di lapisan Controller maupun ditampilkan lewat lapisan View (blade).
 
-	![Screenshot Praktikum 4](assets/screenshots/praktikum4.1.png)
-	![Screenshot Praktikum 4](assets/screenshots/praktikum4.2.png)
-	![Screenshot Praktikum 4](assets/screenshots/praktikum4.3.png)
-	![Screenshot Praktikum 4](assets/screenshots/praktikum4.4.png)
+	![Screenshot Praktikum 4](Jobsheet3/assets/screenshots/praktikum4.1.png)
+	![Screenshot Praktikum 4](Jobsheet3/assets/screenshots/praktikum4.2.png)
+	![Screenshot Praktikum 4](Jobsheet3/assets/screenshots/praktikum4.3.png)
+	![Screenshot Praktikum 4](Jobsheet3/assets/screenshots/praktikum4.4.png)
 
 
 - **Praktikum 5 (Controller & Routes):** Mengambil dan memanipulasi data dari database menggunakan metode DB Query Builder Laravel (contohnya DB::table()).
 
-	![Screenshot Praktikum 5](assets/screenshots/praktikum5.1.png)
-	![Screenshot Praktikum 5](assets/screenshots/praktikum5.2.png)
-	![Screenshot Praktikum 5](assets/screenshots/praktikum5.3.png)
-	![Screenshot Praktikum 5](assets/screenshots/praktikum5.4.png)
+	![Screenshot Praktikum 5](Jobsheet3/assets/screenshots/praktikum5.1.png)
+	![Screenshot Praktikum 5](Jobsheet3/assets/screenshots/praktikum5.2.png)
+	![Screenshot Praktikum 5](Jobsheet3/assets/screenshots/praktikum5.3.png)
+	![Screenshot Praktikum 5](Jobsheet3/assets/screenshots/praktikum5.4.png)
 
 
 - **Praktikum 6 (Views / CRUD):** Mengambil, menambahkan, dan memanipulasi data di database menggunakan paradigma berorientasi objek (OOP) di Eloquent ORM Laravel.
 
-	![Screenshot Praktikum 6](assets/screenshots/praktikum6.1.png)
-	![Screenshot Praktikum 6](assets/screenshots/praktikum6.2.png)
-	![Screenshot Praktikum 6](assets/screenshots/praktikum6.3.png)
+	![Screenshot Praktikum 6](Jobsheet3/assets/screenshots/praktikum6.1.png)
+	![Screenshot Praktikum 6](Jobsheet3/assets/screenshots/praktikum6.2.png)
+	![Screenshot Praktikum 6](Jobsheet3/assets/screenshots/praktikum6.3.png)
 
 
 
