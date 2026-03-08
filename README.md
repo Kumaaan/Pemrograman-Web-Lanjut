@@ -22,6 +22,7 @@ Berikut adalah daftar pengerjaan jobsheet beserta tautan menuju detail laporanny
 | Jobsheet | Topik / Judul Materi | Tautan Laporan |
 | :---: | :--- | :--- |
 | **03** | [Database Migration & Seeder] | [📄 Baca Laporan Minggu ke-3](Jobsheet3/WEEK3.md) |
+| **04** | [MODEL dan ELOQUENT ORM] | [📄 Baca Laporan Minggu ke-4](Jobsheet3/WEEK4.md) |
 
 
 ---
