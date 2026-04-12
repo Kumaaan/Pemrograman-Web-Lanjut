@@ -20,41 +20,60 @@ class PostForm
     public static function configure(Schema $schema): Schema
     {
         return $schema->components([
-    
             Group::make([
                 Section::make('Post Details')
                     ->description('Fill in the details of the post')
                     ->icon('heroicon-o-document-text')
                     ->schema([
-                        
                         Group::make([
-                            TextInput::make('title'),
-                            TextInput::make('slug'),
-                            Select::make('category_id')->relationship('category', 'name')->preload()->searchable(),
+                            TextInput::make('title')
+                                ->required()
+                                ->rules(['min:5'])
+                                ->validationMessages([
+                                    'required' => 'Judul artikel tidak boleh kosong.',
+                                    'min' => 'Judul artikel harus lebih dari 5 huruf.'
+                                ]),
+
+                            TextInput::make('slug')
+                                ->required()
+                                ->unique(ignoreRecord: true) 
+                                ->rules(['min:3'])
+                                ->validationMessages([
+                                    'unique' => 'Slug sudah dipakai, silakan gunakan yang lain.',
+                                    'min' => 'Slug terlalu pendek.'
+                                ]),
+
+                            Select::make('category_id')
+                                ->relationship('category', 'name')
+                                ->preload()
+                                ->searchable()
+                                ->required(), 
+
                             ColorPicker::make('color'),
                         ])->columns(2),
 
-                        MarkdownEditor::make('content')->columnSpan(2), 
-
+                        MarkdownEditor::make('content')->columnSpanFull(),
                     ]),
             ])->columnSpan(2),
 
             Group::make([
-                
                 Section::make('Image Upload')
+                    ->icon('heroicon-o-photo')
                     ->schema([
-                        FileUpload::make('image')->disk('public')->directory('posts'),
+                        FileUpload::make('image')
+                            ->disk('public')
+                            ->directory('posts')
+                            ->required(), 
                     ]),
 
                 Section::make('Meta Information')
+                    ->icon('heroicon-o-tag')
                     ->schema([
                         TagsInput::make('tags'),
                         Checkbox::make('published'),
                         DateTimePicker::make('published_at'),
                     ])
-
             ])->columnSpan(1)
-
         ])->columns(3);
     }
 }
