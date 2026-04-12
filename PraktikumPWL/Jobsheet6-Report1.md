@@ -1,19 +1,19 @@
 # Laporan Praktikum Pemrograman Web Lanjut
 
-**Nama:** [Isi Nama Kamu]
-**NIM:** [Isi NIM Kamu]
-**Mata Kuliah:** Pemrograman Web Lanjut
+**Nama:** Adi Luhung<br>
+**NIM:** 244107020088<br>
+**Mata Kuliah:** Pemrograman Web Lanjut<br>
 **Topik:** Implementasi Form Elements & Resource Post di Filament
 
 ---
 
-## A. Tugas Praktikum
+## Tugas Praktikum
 
-Berikut adalah implementasi kode untuk menjawab instruksi tugas praktikum:
+**1. Tambahkan validasi:**
+* **Title minimal 5 karakter**
+* **Slug unik**
 
-### 1. Penambahan Validasi pada Form
-Untuk menambahkan aturan minimal 5 karakter pada form *Title* dan memastikan *Slug* bersifat unik, modifikasi dilakukan pada file `PostForm.php`:
-
+Berikut adalah implementasi kodenya pada file `PostForm.php`:
 ```php
 TextInput::make('title')
     ->required()
@@ -24,37 +24,38 @@ TextInput::make('slug')
     ->unique(ignoreRecord: true),
 ```
 
-### 2. Penambahan Kolom Published pada Tabel
-Untuk menampilkan status boolean pada tabel Post, file `PostsTable.php` dimodifikasi dengan menambahkan komponen `IconColumn`:
+**2. Tambahkan kolom:**
+* **Published (ikon boolean)**
 
+Berikut adalah implementasi kodenya pada file `PostsTable.php`:
 ```php
 IconColumn::make('published')
     ->boolean(),
 ```
 
-### 3. Hasil Pengujian Praktikum (Screenshot)
-Berikut adalah dokumentasi hasil dari praktikum yang telah dijalankan:
+**3. Buat minimal 3 Post berbeda:**
+Telah diinputkan 3 data post yang berbeda ke dalam sistem, yaitu:
+* Tutorial Setup Laravel 12
+* Review Monster Hunter Wilds
+* Rekomendasi GPU untuk Streaming
 
-**1. Form Create Post**
-*(Menampilkan form saat mengisi data post baru, beserta input gambar, tags, dan select kategori)*
+**4. Screenshot:**
 
+* **Form Create Post**
+*(screenshot form saat mengisi data)*
 ![Screenshot Form Create Post](image/hasil10.png)
 
-**2. Tabel Post**
-*(Menampilkan halaman tabel index yang menunjukkan minimal 3 data post berbeda yang berhasil disimpan beserta gambar dan ikon kolom published)*
-
+* **Tabel Post**
+*(screenshot tabel yang menampilkan 3 post)*
 ![Screenshot Tabel Post](image/hasil11.png)
 
-**3. Struktur Folder Storage**
-*(Menampilkan file explorer yang menunjukkan folder `storage/app/public/posts` sudah terisi dengan file gambar)*
-
-![Screenshot Folder Storage](image/hasil12.png)
+* **Struktur folder storage**
+*(screenshot file explorer VS Code di folder storage/app/public/posts)*
+![Screenshot Struktur Folder Storage](image/hasil12.png)
 
 ---
 
-## B. Analisis dan Diskusi
-
-Berikut adalah jawaban dari pertanyaan diskusi pada jobsheet:
+## Analisis dan Diskusi
 
 **1. Mengapa kita perlu menjalankan perintah `php artisan storage:link`?**
 Secara bawaan, direktori `storage/app/public` tempat Laravel menyimpan file unggahan terisolasi dan tidak dapat diakses secara langsung melalui URL browser demi keamanan. Perintah `storage:link` berfungsi membuat tautan simbolik (*symbolic link*) dari folder `public/storage` menuju folder `storage/app/public`. Tanpa link ini, gambar yang telah diunggah tidak akan bisa dimuat atau ditampilkan di antarmuka web.

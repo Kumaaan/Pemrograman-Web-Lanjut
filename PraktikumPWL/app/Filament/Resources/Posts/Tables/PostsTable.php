@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Posts\Tables;
 
+use Filament\Tables\Columns\IconColumn;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -22,6 +23,8 @@ class PostsTable
                 ColorColumn::make('color'),
                 ImageColumn::make('image')
                     ->disk('public'),
+                IconColumn::make('published')
+                    ->boolean(),
             ])
             ->filters([
                 //
