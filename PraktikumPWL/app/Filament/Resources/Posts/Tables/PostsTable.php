@@ -6,6 +6,7 @@ use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ColorColumn;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Forms\Components\DatePicker;
@@ -17,27 +18,50 @@ class PostsTable
     {
         return $table
             ->columns([
-                TextColumn::make('title')
+                TextColumn::make('id')
+                    ->label('ID')
                     ->sortable()
-                    ->searchable(),
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('title')
+                    ->label('Title')
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(),
 
                 TextColumn::make('slug')
+                    ->label('Slug')
                     ->sortable()
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(),
 
                 TextColumn::make('category.name')
+                    ->label('Category')
                     ->sortable()
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(),
 
-                ColorColumn::make('color'),
+                ColorColumn::make('color')
+                    ->toggleable(),
 
                 ImageColumn::make('image')
-                    ->disk('public'),
+                    ->disk('public')
+                    ->toggleable(),
 
                 TextColumn::make('created_at')
                     ->label('Created At')
                     ->dateTime()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(),
+                
+                TextColumn::make('tags')
+                    ->label('Tags')
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                IconColumn::make('published')
+                    ->label('Published')
+                    ->boolean()
+                    ->toggleable(),
             ])
             ->defaultSort('created_at', 'asc')
             ->filters([
